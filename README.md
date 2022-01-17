@@ -1,3 +1,9 @@
+# CrowdCoin
+> Single page NFT Marketplace clone using Opensea Testnet, Thirdweb, Metamask and NextJS.
+
+View website at: https://cyberpunk-v1.vercel.app/
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
