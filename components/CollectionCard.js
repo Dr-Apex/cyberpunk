@@ -5,12 +5,14 @@ import styles from '../styles/CollectionCard.module.css'
 export default function CollectionCard({id, name, traits, image}) {
   return (
     <div className={styles.collectionCard}>
-      <Image
-        src={image}
-        height={300}
-        width={300}
-        alt='punkImage'
-      />
+      {image && (
+        <img
+          src={image}
+          height={300}
+          width={300}
+          alt='punkImage'
+        />
+      )}
       <div className={styles.details}>
         <div className={styles.name}>
           {name} 

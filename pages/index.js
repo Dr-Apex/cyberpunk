@@ -7,7 +7,7 @@ import Main from '../components/Main'
 
 export default function Home() {
   const [punkListData, setPunkListData] = useState([])
-  const [selectedPunk, setSelectedPunk] = useState(0)
+  const [selectedPunk, setSelectedPunk] = useState(1)
   const [theme, setTheme] = useState(true)
 
   useEffect(() => {

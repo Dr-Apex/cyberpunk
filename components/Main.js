@@ -6,7 +6,7 @@ export default function Main({theme, selectedPunk, punkListData}) {
   const [activePunk, setActivePunk] = useState(punkListData[0])
 
   useEffect(() => {
-    setActivePunk(punkListData[selectedPunk])
+    setActivePunk(punkListData.find(punk => punk.token_id == selectedPunk))
   }, [punkListData, selectedPunk])
 
   return (
@@ -17,14 +17,16 @@ export default function Main({theme, selectedPunk, punkListData}) {
       >
         <section className={styles.punkHighlight}>
           <div className={styles.punkContainer}>
-            <Image
-              priority
-              className={styles.selectedPunk}
-              src={activePunk.image_original_url}
-              height={300}
-              width={300}
-              alt='activePunk'
-            />
+            {activePunk.image_original_url && (
+              <img
+                priority
+                className={styles.selectedPunk}
+                src={activePunk.image_original_url}
+                height={300}
+                width={300}
+                alt='activePunk'
+              />
+            )}
           </div>
         </section>
 
